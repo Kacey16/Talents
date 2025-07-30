@@ -1,0 +1,5 @@
+git branch                 # посмотреть список веток
+git branch <name>          # создать новую ветку
+git checkout <branch>      # переключиться на ветку
+git checkout -b <name>     # создать и переключиться на ветку
+git merge <branch>         # объединить ветки с ветками.md
