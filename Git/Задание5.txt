@@ -1,0 +1,42 @@
+kapopova@SPB-24130002421 MINGW64 ~/Talents/Git (main)
+$ git checkout -b test-branch
+Switched to a new branch 'test-branch'
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents/Git (test-branch)
+$ echo Это тестовый файл > test.txt
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents/Git (test-branch)
+$ git add test.txt
+warning: in the working copy of 'Git/test.txt', LF will be replaced by CRLF the next time Git touches it
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents/Git (test-branch)
+$ git commit -m Добавлен тестовый файл
+[test-branch aeefda2] Добавлен тестовый файл
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git/test.txt
+
+[test-branch 92a5010] Revert Повторный коммит после отката
+ 1 file changed, 1 deletion(-)
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents/Git (test-branch)
+$ git add test.txt
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents/Git (test-branch)
+$ git commit -m Финальный коммит после всех изменений
+On branch test-branch
+nothing to commit, working tree clean
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents/Git (test-branch)
+$ git push origin test-branch
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.13 KiB | 581.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'test-branch' on GitHub by visiting:
+remote:      https://github.com/Kacey16/Talents/pull/new/test-branch
+remote:
+To https://github.com/Kacey16/Talents.git
+ * [new branch]      test-branch -> test-branch 
