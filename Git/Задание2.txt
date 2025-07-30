@@ -1,0 +1,50 @@
+kapopova@SPB-24130002421 MINGW64 ~/Talents (main)
+$ git checkout -b feature/new-page
+Switched to a new branch 'feature/new-page'
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (feature/new-page)
+$ touch new.txt
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (feature/new-page)
+$ git add ^[[200~new.txt
+fatal: pathspec '?[200~new.txt' did not match any files
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (feature/new-page)
+$ git add new.txt
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (feature/new-page)
+$ git commit -m новый файл
+[feature/new-page d882170] новый файл
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (feature/new-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (main)
+$ git pull origin main
+From https://github.com/Kacey16/Talents
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (main)
+$ git merge feature/new-page
+Updating 2c407db..d882170
+Fast-forward
+ new.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+kapopova@SPB-24130002421 MINGW64 ~/Talents (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 319 bytes | 159.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Kacey16/Talents.git
+   2c407db..d882170  main -> main
+
